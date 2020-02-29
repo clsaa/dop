@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-server
+  namespace: dop
+spec:
+  selector:
+    matchLabels:
+      app: test-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: test-server
+    spec:
+      containers:
+        - name: test-server
+          imagePullPolicy: Always
+          image: registry.dop.clsaa.com/dop/test-server:<BUILD_TAG>
+          resources:
+            requests:
+              memory: 384Mi
+              cpu: 250m
+            limits:
+              memory: 384Mi
+              cpu: 500m
+          volumeMounts:
+            - name: host-time
+              mountPath: /etc/localtime
+            - name: host-timezone
+              mountPath: /etc/timezone
+          ports:
+            - containerPort: 13700
+      volumes:
+        - name: host-time
+          hostPath:
+            path: /etc/localtime
+        - name: host-timezone
+          hostPath:
+            path: /etc/timezone
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-server
+  namespace: dop
+  labels:
+    app: test-server
+spec:
+  ports:
+    - port: 13700
+      protocol: TCP
+      targetPort: 13700
+  selector:
+    app: test-server

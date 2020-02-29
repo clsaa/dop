@@ -1,0 +1,128 @@
+.tag-list-container{
+    background-color: rgb(255, 255, 255);
+    min-height: 600px;
+}
+
+.loading-tag-list{
+    width: 100%;
+    min-height: 500px;
+}
+
+.div-tag-list-top{
+    height: 80px;
+    padding-left: 20px;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #e8e8e8;
+    color: black;
+}
+
+.text-tag-list-top{
+    float: left;
+    line-height: 80px;
+}
+
+.btn-new-tag{
+    font-size: 13px;
+    height: 34px;
+    width: 100px;
+    float: right;
+    border-radius: 3px;
+    background-color: #1aaa55;
+    border-color: #168f48;
+    color: #fff;
+    margin: 23px 15px 23px 0;
+}
+
+.input-tag-list-name{
+    font-size: 13px;
+    width:300px;
+    height: 34px;
+    padding: 15px;
+    float: right;
+    margin: 23px 15px 23px 0;
+    border-radius: 2px;
+    border: 1px solid #e1e1e1;
+}
+
+.div-tag-list-item{
+    padding-left: 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.div-tag-item-intro{
+    width: 80%;
+}
+
+.div-tag-item-operation{
+    width: 20%;
+}
+
+.div-tag-item-name-msg{
+    display: flex;
+    align-items: center;
+    height: 23px;
+}
+
+.div-tag-item-commit{
+    display: flex;
+    align-items: center;
+    height: 23px;
+}
+
+.img-tag-item-intro{
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+}
+
+.text-tag-item-name{
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.text-tag-item-msg{
+    font-size: 15px;
+}
+
+.text-tag-item-primary{
+    color: #007bff;
+}
+
+.btn-tag-item-delete{
+    float: right;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #db3b21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+
+.img-tag-item-delete{
+    width: 12px;
+    height: 12px;
+}
+
+.img-tag-item-download{
+    width: 14px;
+    height: 14px;
+}
+
+.btn-tag-item-download{
+    float: right;
+    margin-right: 20px;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}

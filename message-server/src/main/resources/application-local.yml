@@ -1,0 +1,76 @@
+server:
+  port: 13400
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  application:
+    name: message-server
+  data:
+    mongodb:
+      uri: mongodb://121.42.13.103:31041/db_message
+  #邮箱配置
+  mail:
+    host: smtp.qq.com
+    username: 1740122439@qq.com
+    password: rfbyspwizxvcdejj
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true
+            trust: smtp.qq.com
+          socketFactory.clsaa: javax.net.ssl.SSLSocketFactory
+    port: 465
+
+spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS: true
+spring.jackson.serialization.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS: false
+
+project:
+  host: localhost:${server.port}
+  groupId: @project.groupId@
+  artifactId: @project.artifactId@
+  version: @project.version@
+  name: @project.name@
+  description: @project.description@
+  url: @project.url@
+swagger.enable: true
+eureka:
+  instance:
+    appname: ${spring.application.name}
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+    prefer-ip-address: true
+    #续约更新时间间隔
+    lease-renewal-interval-in-seconds: 5
+    #续约到期时间
+    lease-expiration-duration-in-seconds: 10
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registry-fetch-interval-seconds: 5 #定时刷新本地缓存
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  ServerListRefreshInterval: 2000
+logging.path: ./logs/${spring.application.name}
+
+
+logging.level.org .springframework.data.mongodb.core: DEBUG
+
+message:
+  mq:
+    RocketMQ:                                     #RocketMQ相关配置
+      namesrvAddr: rocketmq.dop.clsaa.com:9876    #name-server地址与端口,多个可用分号隔开
+      groupName:  DOP_MESSAGE_PRODUCER_GROUP      #生产者组名称
+      instanceName: DOP_MESSAGE                   #要发送到的MQ集群
+      maxMessageSize: 131072 # 1024*128           #最大消息长度
+      sendMessageTimeout: 10000                   #消息发送超时时间
+      emailTopic: EMAIL_QUEUE                     #消息发送超时时间
+      emailConsumerGroup: EMAIL_CONSUMER_GROUP    #消息发送超时时间

@@ -1,0 +1,145 @@
+.commit-list-container{
+    background-color: rgb(255, 255, 255);
+    min-height: 600px;
+    position: relative;
+}
+
+.div-commit-list-top{
+    height: 80px;
+    padding-left: 20px;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #e8e8e8;
+    color: black;
+}
+
+.div-commit-list-top a{
+    color: black;
+}
+
+.loading-ref-commit-list{
+    float: left;
+    margin: 25px 20px auto 10px;
+    color: #aeaeae;
+}
+
+.select-ref-commit-list{
+    width: 200px;
+}
+
+.link-commit-root{
+    float: left;
+    margin-top: 32px;
+}
+
+.input-commit-msg-right{
+    width:350px;
+    height: 30px;
+    padding: 15px;
+    float: right;
+    margin-right: 25px;
+    margin-top: 25px;
+    border-radius: 4px;
+    border: 1px solid #c9c9c9;
+}
+
+.div-commit-date{
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    padding-left: 15px;
+    background-color: #f7f8fa;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.div-commit-item{
+    height: 60px;
+    padding-left: 5px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.div-commit-item-avatar{
+    float: left;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #cfeeec;
+    line-height: 40px;
+    margin-top: 10px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.div-commit-item-content{
+    float: left;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.div-commit-item-content-up{
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.div-commit-item-content-down{
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #797979;
+}
+
+.div-commit-operation{
+    float: right;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 1px solid #e4e4e4;
+    overflow: hidden;
+
+}
+
+.text-commit-short-id{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    background-color: #fbfbfb;
+    text-align: center;
+    border-right: 1px solid #e4e4e4;
+}
+
+.btn-commit-copy-sha{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border:0;
+    border-right: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.btn-commit-browse-file{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border:0;
+    text-align: center;
+}
+
+.img-commit-browse-file{
+    width: 14px;
+    height: 12px;
+    vertical-align: middle;
+}
+
+.img-commit-copy-sha{
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+
+
+

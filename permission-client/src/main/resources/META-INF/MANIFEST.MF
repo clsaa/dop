@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Class-Path: spring-beans-5.1.6.RELEASE.jar aspectjweaver-1.9.2.jar spr
+ ing-jcl-5.1.6.RELEASE.jar aspectjrt-1.9.2.jar spring-expression-5.1.6
+ .RELEASE.jar spring-context-5.1.6.RELEASE.jar spring-aop-5.1.6.RELEAS
+ E.jar spring-core-5.1.6.RELEASE.jar
+

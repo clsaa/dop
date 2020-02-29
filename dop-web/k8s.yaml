@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dop-web
+  namespace: dop
+spec:
+  selector:
+    matchLabels:
+      app: dop-web
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dop-web
+    spec:
+      containers:
+        - name: dop-web
+          image: registry.dop.clsaa.com/dop/dop-web:<BUILD_TAG>
+          volumeMounts:
+            - name: host-time
+              mountPath: /etc/localtime
+            - name: host-timezone
+              mountPath: /etc/timezone
+          ports:
+            - containerPort: 80
+      volumes:
+        - name: host-time
+          hostPath:
+            path: /etc/localtime
+        - name: host-timezone
+          hostPath:
+            path: /etc/timezone
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dop-web
+  namespace: dop
+  labels:
+    app: dop-web
+spec:
+  ports:
+    - port: 14237
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: dop-web
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+ name: dop-web
+ namespace: dop
+ annotations:
+     kubernetes.io/ingress.class: "nginx"
+spec:
+ rules:
+   - host: www.dop.clsaa.com
+     http:
+       paths:
+         - backend:
+             serviceName: dop-web
+             servicePort: 14237

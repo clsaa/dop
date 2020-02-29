@@ -1,0 +1,28 @@
+
+.create-app-form-container {
+  width: 100%;
+
+
+}
+
+.create-app-form {
+  padding: 20px;
+  background: #FFF;
+  margin: 20px;
+  width: 90%;
+  text-align: left;
+
+
+}
+
+.create-app-form-loading {
+  width: 90%;
+
+  .form-item-input {
+    width: 135%
+  }
+
+  .form-item-select {
+    width: 135%
+  }
+}

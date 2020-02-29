@@ -1,0 +1,189 @@
+.branch-list-container{
+    background-color: rgb(255, 255, 255);
+    min-height: 600px;
+    position: relative;
+}
+
+.loading-branch-list{
+    width: 100%;
+    min-height: 500px;
+}
+
+.div-branch-list-top{
+    height: 80px;
+    padding-left: 20px;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #e8e8e8;
+    color: black;
+
+}
+
+.text-branch-list-top{
+    float: left;
+    line-height: 80px;
+}
+
+.text-branch-list-top a{
+    margin: 0 3px;
+    color:#007bff;
+}
+
+.input-branch-list-name{
+    font-size: 13px;
+    width:300px;
+    height: 34px;
+    padding: 15px;
+    float: right;
+    margin: 23px 15px 23px 0;
+    border-radius: 2px;
+    border: 1px solid #e1e1e1;
+}
+
+
+
+.btn-delete-merged-branches{
+    font-size: 13px;
+    height: 34px;
+    padding: 0 30px;
+    float: right;
+    background-color: #fff;
+    color: #db3b21;
+    border-color: #db3b21;
+    border-radius: 3px;
+    margin: 23px 15px 23px 0;
+}
+
+.btn-delete-merged-branches:hover{
+    background-color: #db3b21;
+    color: #fff;
+    border-color: #db3b21;
+}
+
+
+
+.btn-new-branch{
+    font-size: 13px;
+    height: 34px;
+    width: 100px;
+    float: right;
+    border-radius: 3px;
+    background-color: #1aaa55;
+    border-color: #168f48;
+    color: #fff;
+    margin: 23px 15px 23px 0;
+}
+
+.div-branch-list-item{
+    padding-left: 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.div-branch-item-name{
+    display: flex;
+    align-items: center;
+    height: 23px;
+}
+
+.div-branch-item-commit{
+    display: flex;
+    align-items: center;
+    height: 23px;
+}
+
+.img-branch-item-intro{
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+}
+
+.text-branch-item-name{
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.label-branch-item{
+    padding:2px 5px;
+    margin-right: 5px;
+    font-size: 10px;
+    border-radius: 3px;
+    color: white;
+}
+
+
+.label-branch-item-default{
+    background-color: #007bff;
+}
+
+.label-branch-item-protected{
+    background-color: #28a745;
+}
+
+.label-branch-item-merged{
+    background-color: #6c757d;
+}
+
+.div-branch-item-intro{
+    width: 80%;
+}
+
+.div-branch-item-operation{
+    width: 20%;
+}
+
+.btn-branch-item-merge{
+    float: right;
+    height: 30px;
+    width: 150px;
+    background-color: #fff;
+    margin-right: 15px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e1e1e1;
+}
+
+.btn-branch-item-delete{
+    float: right;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #db3b21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+
+.btn-branch-item-delete-disabled{
+    float: right;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+
+
+
+.img-branch-item-delete{
+    width: 12px;
+    height: 12px;
+}
+
+.text-branch-item-primary{
+    color: #007bff;
+}
+
+
+
+

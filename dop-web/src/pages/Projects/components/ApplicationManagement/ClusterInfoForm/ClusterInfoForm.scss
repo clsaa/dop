@@ -1,0 +1,55 @@
+.card {
+  width: 70%;
+  padding: 2%;
+  margin: 1%;
+
+  .card-form {
+    width: 100%;
+    //padding:20px;
+    margin-left: 20px;
+    .form-loading {
+      width: 48%;
+      //margin-bottom: 3%;
+      //text-align: center;
+      .form-item-input {
+        width: 100%;
+        &.hide {
+          display: none
+        }
+      }
+
+      .form-item-text-container {
+        text-align: left;
+        margin-left: 10%;
+        margin-top: 5px;
+
+        &.hide {
+          display: none;
+        }
+
+        .edit-icon {
+          float: right;
+          //margin-left: 10%;
+        }
+      }
+
+      .save-button {
+        margin-right: 5px;
+
+        &.hide {
+          display: none;
+        }
+
+      }
+
+      .cancel-button {
+        &.hide {
+          display: none;
+        }
+      }
+
+    }
+
+  }
+
+}

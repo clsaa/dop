@@ -1,0 +1,98 @@
+.new-mr-container{
+    background-color: rgb(255, 255, 255);
+}
+
+.loading-new-mr{
+    width: 100%;
+}
+
+.div-new-mr-top{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 60px;
+    height: 60px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.div-new-mr-input{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.text-new-mr-title{
+    text-align: right;
+    padding-right: 30px;
+    line-height: 40px;
+    width: 15%;
+}
+
+.input-new-mr-title{
+    height: 30px;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    width: 85%;
+}
+
+.text-new-mr-description{
+    text-align: right;
+    padding-right: 30px;
+    display: inline-block;
+    height: 120px;
+    line-height: 40px;
+    width: 15%;
+}
+
+.input-new-mr-description{
+    height: 120px;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    width: 85%;
+}
+
+.text-new-mr-branch{
+    text-align: right;
+    padding-right: 30px;
+    line-height: 40px;
+    width: 15%;
+}
+
+
+.select-new-mr-branch{
+    width: 85%;
+}
+
+.div-new-mr-submit{
+    height: 80px;
+    background-color: #fbfbfb;
+    border-top: 1px solid #e8e8e8;
+}
+
+.btn-new-mr-add{
+    margin-top: 20px;
+    float: left;
+    background-color: #31af64;
+    border-color: #2faa60;
+    color: white;
+    padding: 0 30px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.btn-new-mr-cancel{
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+    background-color: rgb(255, 255, 255);
+    border-color: #e2e2e2;
+    color: black;
+    width: 60px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 15px;
+    font-size: 13px;
+}

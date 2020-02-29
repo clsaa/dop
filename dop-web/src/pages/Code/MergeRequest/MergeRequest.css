@@ -1,0 +1,132 @@
+.mr-container{
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 60px;
+}
+
+.div-mr-top{
+    padding-left: 15px;
+    height: 60px;
+    border-bottom:1px solid #e1e1e1;
+    font-size: 15px;
+}
+
+.div-mr-author{
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.label-mr-opened{
+    background-color: #28a745;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.label-mr-merged{
+    background-color: #007bff;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.label-mr-closed{
+    background-color: #dc3545;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.text-mr-author-time{
+    margin: 0 5px;
+    color: #8c8c8c;
+}
+
+.div-mr-author-avatar{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: #cfeeec;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.btn-mr-close{
+    font-size: 13px;
+    height: 34px;
+    padding: 0 30px;
+    float: right;
+    background-color: #fff;
+    color: #fc9403;
+    border-color: #fc9403;
+    border-radius: 3px;
+    margin: 13px 15px 13px 0;
+}
+
+.btn-mr-merge{
+    font-size: 13px;
+    background-color: #fff;
+    color: #28a745;
+    border-color: #28a745;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin-right: 10px;
+
+}
+
+.btn-mr-reopen{
+    font-size: 13px;
+    background-color: #fff;
+    color: #ffc107;
+    border-color: #ffc107;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin-right: 10px;
+
+}
+
+.div-mr-title{
+    padding-left: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+.div-mr-description{
+    padding-left: 15px;
+    line-height: 60px;
+    height: 60px;
+    border-bottom:1px solid #e1e1e1;
+    font-size: 15px;
+}
+
+.div-mr-msg{
+    padding-left: 15px;
+    line-height: 60px;
+    font-size: 15px;
+}
+
+.div-mr-operation{
+    display: flex;
+    align-items: center;
+    background-color: #f7f8fa;
+    height: 90px;
+    width: 95%;
+    border: 1px solid #e1e1e1;
+    margin: 0 auto;
+    padding: 0 15px;
+    border-radius: 2px;
+}
+
+.img-mr-tip{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+}

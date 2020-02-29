@@ -1,0 +1,60 @@
+server:
+  port: 13500
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  application:
+    name: audit-server
+  data:
+    mongodb:
+      uri: mongodb://121.42.13.103:31041/db_audit
+
+spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS: true
+spring.jackson.serialization.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS: false
+
+project:
+  host: localhost:${server.port}
+  groupId: @project.groupId@
+  artifactId: @project.artifactId@
+  version: @project.version@
+  name: @project.name@
+  description: @project.description@
+  url: @project.url@
+swagger.enable: true
+eureka:
+  instance:
+    appname: ${spring.application.name}
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+    prefer-ip-address: true
+    #续约更新时间间隔
+    lease-renewal-interval-in-seconds: 5
+    #续约到期时间
+    lease-expiration-duration-in-seconds: 10
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registry-fetch-interval-seconds: 5 #定时刷新本地缓存
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  ServerListRefreshInterval: 2000
+logging.path: ./logs/${spring.application.name}
+
+
+logging.level.org .springframework.data.mongodb.core: DEBUG
+
+audit:
+  supportedServices:
+    - APPLICATION-SERVER
+    - CI-ADJUST-SERVER
+    - CODE-SERVER
+    - IMAGE-SERVER
+    - LOGIN-SERVER
+    - MESSAGE-SERVER
+    - PERMISSION-SERVER
+    - PIPLINE-SERVER
+    - TEST-SERVER
+    - USER-SERVER

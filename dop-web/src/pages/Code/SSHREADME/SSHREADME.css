@@ -1,0 +1,58 @@
+.ssh-readme-container{
+    background-color: rgb(255, 255, 255);
+    padding: 1px 20px 10px 20px;
+}
+
+.ssh-readme-container h1{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 11px 0 12px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #e7e9ed;
+    color: #313236;
+}
+
+.ssh-readme-container h2{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 24px 0 12px 0;
+    color: #313236;
+}
+
+.ssh-readme-container p{
+    color: #5c5d5e;
+    margin: 6px 0 0 0;
+}
+
+.ssh-readme-container pre{
+    margin: 12px 0 12px 0 !important;
+    background-color: #f8fafc;
+    font-size: 13px !important;
+    color: #5b6169;
+    line-height: 1.6em !important;
+    border-radius: 2px;
+    border: 1px solid #e7e9ed;
+    display: block;
+    padding: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.ssh-readme-container pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.ssh-readme-container p code{
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 2px;
+}
+
+

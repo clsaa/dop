@@ -1,0 +1,4 @@
+环境ID: <ENV_ID>
+环境名称： <ENV_NAME>
+环境级别： <ENV_LEVEL>
+部署方式： <DEPLOYMENT_STRATEGY>

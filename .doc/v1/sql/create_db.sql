@@ -1,0 +1,10 @@
+create database db_dop_login;
+create database db_dop_message;
+create database db_dop_permission;
+create database db_dop_user;
+create database db_dop_audit;
+create database db_dop_pipline;
+create database db_dop_test;
+create database db_dop_application;
+create database db_dop_code;
+create database db_dop_image;

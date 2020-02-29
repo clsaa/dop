@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application-server
+  namespace: dop
+spec:
+  selector:
+    matchLabels:
+      app: application-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: application-server
+    spec:
+      containers:
+        - name: application-server
+          imagePullPolicy: Always
+          image: registry.dop.clsaa.com/dop/application-server:<BUILD_TAG>
+          resources:
+            requests:
+              memory: 384Mi
+              cpu: 250m
+            limits:
+              memory: 384Mi
+              cpu: 500m
+          volumeMounts:
+            - name: host-time
+              mountPath: /etc/localtime
+            - name: host-timezone
+              mountPath: /etc/timezone
+          ports:
+            - containerPort: 13800
+      volumes:
+        - name: host-time
+          hostPath:
+            path: /etc/localtime
+        - name: host-timezone
+          hostPath:
+            path: /etc/timezone
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: application-server
+  namespace: dop
+  labels:
+    app: application-server
+spec:
+  ports:
+    - port: 13800
+      protocol: TCP
+      targetPort: 13800
+  selector:
+    app: application-server

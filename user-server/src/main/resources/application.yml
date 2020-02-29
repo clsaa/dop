@@ -1,0 +1,103 @@
+server:
+  port: 13100
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  application:
+    name: user-server
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://115.28.186.77:30306/db_dop_user?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: dop
+    password: Dop_mysql_12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    max-active: 10
+    max-idle: 5
+    min-idle: 5
+    initial-size: 5
+    max-wait: 10000
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    # 打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    # 合并多个DruidDataSource的监控数据
+    useGlobalDataSourceStat: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  redis:
+    database: 0
+#    host: redis.dop.clsaa.com
+    host: 121.42.13.243
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 5000
+
+project:
+  host: localhost:${server.port}
+  groupId: @project.groupId@
+  artifactId: @project.artifactId@
+  version: @project.version@
+  name: @project.name@
+  description: @project.description@
+  url: @project.url@
+swagger.enable: true
+eureka:
+  instance:
+    appname: ${spring.application.name}
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+    prefer-ip-address: true
+    #续约更新时间间隔
+    lease-renewal-interval-in-seconds: 5
+    #续约到期时间
+    lease-expiration-duration-in-seconds: 10
+  client:
+    serviceUrl:
+      defaultZone: http://discovery.dop.clsaa.com/eureka
+    registry-fetch-interval-seconds: 5 #定时刷新本地缓存
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  ServerListRefreshInterval: 2000
+logging.path: ./logs/${spring.application.name}
+
+user:
+  account:
+    secret:
+      RSAPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA50CR3EdT0EpCs7YbakOfoRe2QQMQ1qvDWwS8ts1E98NCunPI8ozigtuNl7ZqtpP_VP_MR66B3TnDwGvDfbj7VoYIDURwyu_KzfsfuTq5jH3D1hSxzqsXp6zyp8s9pkhn0zwIr2AK90lX3lUY4DsFQTUOpqtfJ9PFFWsHUBtK7CfT2mJhnf3JtVLG6rEJk8JQvEg3M0loqHQBo8TP35jXWYeEi-oULNed1eLEKk1Gzg-DLB8C5I_stsHhgzYmcFr4ZMwsmEb1hPsgsZHLEPDXnSvmFPMuT0hi3Qx6lPrle-6dUrKBp48Wb7HZqIt5S2g45HvLnFh3FZKZM3mjqNm09QIDAQAB
+      RSAPrivateKey: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDnQJHcR1PQSkKzthtqQ5-hF7ZBAxDWq8NbBLy2zUT3w0K6c8jyjOKC242Xtmq2k_9U_8xHroHdOcPAa8N9uPtWhggNRHDK78rN-x-5OrmMfcPWFLHOqxenrPKnyz2mSGfTPAivYAr3SVfeVRjgOwVBNQ6mq18n08UVawdQG0rsJ9PaYmGd_cm1UsbqsQmTwlC8SDczSWiodAGjxM_fmNdZh4SL6hQs153V4sQqTUbOD4MsHwLkj-y2weGDNiZwWvhkzCyYRvWE-yCxkcsQ8NedK-YU8y5PSGLdDHqU-uV77p1SsoGnjxZvsdmoi3lLaDjke8ucWHcVkpkzeaOo2bT1AgMBAAECggEAZK5LEuGHDxdVxRJTC0fX1vYQ5mskSKJNknIUi24BSfGcOrswUNGfyKM4GUZVXZo_v00DLm4-ogeFP2Bro3AHFVuTY9tZVDFkVZuw6x8zK4SR38Hwy-7XhKwalY06EQxTD7eCfIBPJeyrsePQycdIeWRVNaFE830SwElxzKGlU_0LFmtoPfZqiRKriLpII2hAiRedNvrvlNpAUGtgGCpahRCGQmpFTM2FRD-F7ChLnY-wAVa88zsMcLpwVTchx6t6inxsnI6QEHfhUsFrio_a-nvLE_Lh7I_rSWIzPXiwdbuUVo1LbQl9TphtGekvHn8SUlSJJ7Bg8NkjACoXHqlO4QKBgQD7mn_ZiS_yMbrRQ-EJad62GyogmM6y-rNA9cjh9uNk_QCJdLOehjRJ8HOk8b-YMdyVbvHJLHs8gAqL9u4o5c75CZgcTYQRZOdef5Usk15E933tHowKNAHLZC5ubvFNrUdihMcIFEwfFFAyTwmXsWSqqekhAFALFcK7_JfyIl32zQKBgQDrSwhg9_0lqAb-EFf27Nk95mO3vtLmarlgSWReWeDf1bi4FC80J3gyyEtwQm4DQQEOjLGkQPDUdn_pxQZ-jWXNL02o-pXYg-IJiRJtcwkpKNgi3UgN0OF6VAF4-UbGLhkFlLVPjA7KY2DCXIvboQvY74ONmc2T0LU6N1RTtzKmyQKBgHEH7ZvKt9F0adsNRZG3ECh7d6eBPorFebYbNQ3enjWGO7GEzhTPcbot3aYiPNKgw9oWJ2UbKJn7Y8GRQ1j4NM1IdB9y63vs-sxHQLrv0Y_mJ5pY-My0pIG9FebizGD7EXC--bM1eyUTORwAyext8y2Ae40p2MvCEOPnDFPpAJGZAoGBAKK3bwHwPcau3rcQgmSnAs1F6KwHcT4bjDtERf7h1Ru2Z1oVy1cb_InR7imiJwZlC-AN-EOJDYNAt9Doikc2bbJqBiDXuozTF5xUiMPcC_fE4UOrF8tGKsg4FBSe_wzKkE9FueVbDFd2RlHjQm0OgGzzplxkgsC4UrwBy3VhecvRAoGBAIJsHSZzoALIis_rIGxsq8ENiCP52C6SiQ4hS90BcUcXmhZ2AeOFpyB0yyVaCRMm3B8uIDjymfEIl6-EUMX1Qj-CY_CncD2ZCscSJp3kWVQdiYkeVEduHZZZ4JUcgg6cgp00QSKXO_nfm17ciIFBcOmsO_JciwNS8TxEvs-Qz8cF
+message:
+  email:
+    registerContent: "正在注册DOP系统，点击链接完成注册：http://www.dop.clsaa.com/#/register/transfer?code=:code"
+    resetContent: "正在修改DOP密码，验证码：:code"
+    from: softeng_dop@163.com
+  mq:
+    RocketMQ:                                       #RocketMQ相关配置
+      namesrvAddr: rocketmq.dop.clsaa.com:9876      #name-server地址与端口,多个可用分号隔开
+      groupName:  DOP_MESSAGE_PRODUCER_GROUP        #生产者组名称
+      instanceName: DOP_MESSAGE                     #要发送到的MQ集群
+      maxMessageSize: 131072 # 1024*128             #最大消息长度
+      sendMessageTimeout: 10000                     #消息发送超时时间
+      emailTopic: EMAIL_QUEUE                       #email发送，主题名
+      registerAccountTopic: REGISTER_ACCOUNT_QUEUE  #注册用户广播，主题名
+      updateAccountTopic: UPDATE_ACCOUNT_QUEUE      #注册用户广播，主题名

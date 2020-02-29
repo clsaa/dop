@@ -1,0 +1,78 @@
+.new-ssh-container{
+    background-color: rgb(255, 255, 255);
+}
+.div-new-ssh-top{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 60px;
+    height: 60px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.div-new-ssh-input{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+.input-new-ssh-key{
+    height: 200px;
+    border: 1px solid #e2e2e2;
+    width: 85%;
+}
+
+.input-new-ssh-title{
+    height: 40px;
+    border: 1px solid #e2e2e2;
+    width: 85%;
+}
+
+.text-new-ssh-key{
+     text-align: right;
+     line-height: 40px;
+     padding-right: 30px;
+     width: 15%;
+}
+
+.text-new-ssh-title{
+    text-align: right;
+    padding-right: 30px;
+    line-height: 40px;
+    width: 15%;
+}
+
+.div-new-ssh-submit{
+    height: 80px;
+    background-color: #fbfbfb;
+    border-top: 1px solid #e8e8e8;
+}
+
+.btn-new-ssh-add{
+    margin-top: 20px;
+    float: left;
+    background-color: #31af64;
+    border-color: #2faa60;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.btn-new-ssh-cancel{
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+    background-color: rgb(255, 255, 255);
+    border-color: #e2e2e2;
+    color: black;
+    width: 60px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+

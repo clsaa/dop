@@ -1,0 +1,52 @@
+.title{
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0,.85);
+}
+
+
+.select{
+  margin-left: 10px;
+  width: 150px;
+}
+
+.headRow{
+  margin-bottom: 10px;
+}
+
+.button{
+  margin-left: 10px;
+}
+
+.repoName{
+  margin-bottom: 15px;
+  margin-left: 20px;
+  font-size: x-large;
+  font-weight: 500;
+  color: rgba(0, 0, 0,.85);
+}
+
+.body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datePicker{
+  margin-left: 10px;
+}
+.imgStyle{
+  width:25px;
+  height: 25px;
+}
+
+.imgStyle:hover{
+  cursor: pointer;
+}
+
+.copyDigest:hover{
+  cursor: pointer;
+}
+

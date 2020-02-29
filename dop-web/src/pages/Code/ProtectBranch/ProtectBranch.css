@@ -1,0 +1,121 @@
+.protect-branch-container{
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 80px;
+}
+
+.loading-protect-branch{
+    width: 85%;
+}
+
+.creating-protect-branch{
+    width: 100%;
+}
+
+.div-protect-branch-top{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 60px;
+    height: 60px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.div-protect-branch-input{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.text-protect-branch-name{
+    text-align: right;
+    padding-right: 30px;
+    line-height: 40px;
+    width: 15%;
+}
+
+
+.select-protect-branch{
+    width: 100%;
+}
+
+.div-protect-branch-check{
+    width: 85%;
+}
+
+.div-protect-branch-check b{
+    margin-right: 100px;
+}
+
+.div-protect-branch-submit{
+    height: 60px;
+    background-color: #fbfbfb;
+    border-top: 1px solid #e8e8e8;
+}
+
+.btn-protect-branch-add{
+    margin-top: 20px;
+    float: left;
+    background-color: #31af64;
+    border-color: #2faa60;
+    color: white;
+    padding: 0 15px;
+    height: 30px;
+    border-radius: 2px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.div-protect-branch-list-top{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 50px;
+    height: 50px;
+    padding-left: 20px;
+}
+
+.div-protect-branch-list-item{
+    padding: 0 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.div-protect-branch-list-head{
+    padding: 0 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.div-protect-branch-list-head div{
+    width: 25%;
+}
+
+.div-protect-branch-list-item div{
+    width: 25%;
+}
+
+.btn-unprotect-branch{
+    float:right;
+    background-color: #e52c5a;
+    border-color: #e52c5a;
+    color: white;
+    padding: 0 15px;
+    height: 30px;
+    border-radius: 2px;
+    font-size: 13px;
+
+}
+
+.label-protect-branch-default{
+    padding:2px 5px;
+    margin-left: 5px;
+    font-size: 10px;
+    border-radius: 3px;
+    color: white;
+    background-color: #007bff;
+}
+

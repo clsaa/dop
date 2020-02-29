@@ -1,0 +1,140 @@
+.edit-project-update-container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.edit-project-delete-container{
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    border: 1px solid #e52c5a;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.edit-project-update-title{
+    height: 60px;
+    padding-left: 20px;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #e8e8e8;
+    color: black;
+    line-height: 60px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.edit-project-delete-title{
+    height: 60px;
+    padding-left: 20px;
+    color: white;
+    background-color: #e52c5a;
+    border-color: #e52c5a;
+    line-height: 60px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.edit-project-input-div{
+    display: flex;
+    padding: 15px 50px;
+    justify-content: center;
+}
+
+.edit-project-label-left{
+    font-size: 15px;
+    width: 15%;
+    text-align: center;
+}
+
+.edit-project-input-name{
+    border-radius: 2px;
+    border: 1px solid #e2e2e2;
+    font-size: 15px;
+    width: 85%;
+    height: 40px;
+}
+
+.edit-project-input-description{
+    border-radius: 2px;
+    border: 1px solid #e2e2e2;
+    font-size: 15px;
+    width: 85%;
+    height: 100px;
+}
+
+.edit-project-label-branch{
+    font-size: 15px;
+    margin-top: 7px;
+    width: 15%;
+    text-align: center;
+}
+
+.edit-project-select-branch{
+    width: 85%;
+}
+
+.edit-project-choose-div{
+    margin-top: 10px;
+    display: flex;
+    padding: 15px 50px;
+    justify-content: center;
+}
+
+.edit-project-visibility-div{
+    width: 85%;
+}
+
+.edit-project-submit-div{
+    margin-top: 20px;
+    height: 80px;
+    background-color: #fbfbfb;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+}
+
+.edit-project-submit-div{
+    margin-top: 20px;
+    height: 80px;
+    background-color: #fbfbfb;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+}
+
+.edit-project-update-btn{
+    background-color: #31af64;
+    border-color: #2faa60;
+    color: white;
+    padding: 0 30px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+.edit-project-delete-btn{
+    color: white;
+    background-color: #e52c5a;
+    border-color: #e52c5a;
+    padding: 0 30px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+.edit-project-delete-description{
+    padding-left: 20px;
+}
+
+.edit-project-delete-dialog{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 400px;
+}
+
+.edit-project-delete-font{
+    color: crimson;
+}

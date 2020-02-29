@@ -1,0 +1,29 @@
+.table-container {
+  width: 48%;
+  margin: 0 auto;
+
+  .table {
+    width: 100%;
+    margin: 20px;
+
+    .key-text {
+      float: left;
+      text-align: left;
+    }
+
+    .key-icon {
+      float: right;
+      color: #99ccff
+    }
+
+    .value-text {
+      float: left;
+      text-align: left
+    }
+
+    .value-icon {
+      float: right;
+      color: #81c7ff;
+    }
+  }
+}

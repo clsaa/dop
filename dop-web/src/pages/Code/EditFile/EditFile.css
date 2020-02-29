@@ -1,0 +1,117 @@
+.loading-edit-file{
+    width: 100%;
+}
+.edit-file-container{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    height:800px;
+}
+
+.edit-file-section{
+
+    height: 620px;
+    overflow: auto;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.div-edit-file-top{
+    height: 60px;
+    line-height: 60px;
+    background-color: #fbfbfb;
+    padding-left: 20px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.div-line-number-edit{
+    min-height: 560px;
+    float: left;
+    width: 5%;
+    background-color: #f7f8fa;
+    padding-right: 10px;
+    border-right: 1px solid #fbfbfb;
+}
+
+.text-line-number{
+    display: block;
+    text-align: right;
+    color: #7f8fa4;
+    line-height: 20px;
+    font-size: 15px;
+    height: 20px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.input-area-code{
+
+    overflow: auto;
+    float: left;
+    min-width: 95%;
+    line-height: 20px;
+    font-size: 15px;
+    padding: 0 0 0 10px;
+    border: 0;
+    margin: 0;
+    outline: none;
+    resize:none;
+
+}
+
+.text-edit-file-title{
+    font-size: 17px;
+}
+
+.text-edit-file-name{
+    font-size: 15px;
+    color:#797979;
+    padding-left: 15px;
+    border-left: 1px solid #e3e3e3;
+}
+
+.text-edit-file-branch{
+    margin-right: 15px;
+    margin-left: 7px;
+    font-size: 15px;
+    color:#797979;
+}
+
+.div-edit-file-top img{
+    width: 9px;
+    height: 11px;
+    margin-left: 30px;
+}
+
+.edit-file-commit-section{
+    padding: 20px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.edit-file-commit-lable{
+    width: 15%;
+    height: 70px;
+    font-size: 15px;
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+
+.edit-file-commit-input{
+    height: 70px;
+    width: 95%;
+    border-radius: 5px;
+    border: 1px solid #e3e3e3;
+}
+
+.btn-edit-file-commit{
+    background-color: #31af64;
+    border-color: #2faa60;
+    color: white;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 120px;
+}

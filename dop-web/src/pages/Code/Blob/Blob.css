@@ -1,0 +1,170 @@
+.blob-container{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    min-height: 600px;
+    /*overflow: auto;*/
+}
+
+.div-blob-top{
+    display: flex;
+    align-items:center ;
+    height: 80px;
+    padding-left: 20px;
+    position: relative;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.div-blob-title{
+    padding-left: 30px;
+    background-color: #f7f8fa;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.div-blob-title img{
+    width: 15px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.div-blob-operation{
+    position:absolute;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    top: 5px;
+    right: 10px;
+    border-radius: 5px;
+    border: 1px solid #e4e4e4;
+    overflow: hidden;
+}
+
+.btn-blob-edit{
+    height: 30px;
+    width: 70px;
+    background-color: white;
+    border:0;
+    border-right: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.btn-blob-delete{
+    height: 30px;
+    width: 70px;
+    background-color: #e04f4f;
+    color:white;
+    border:0;
+    border-right: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.btn-blob-disabled{
+    height: 30px;
+    width: 70px;
+    background-color: #eaeaea;
+    color: #545454;
+    border:0;
+    border-right: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+
+
+.btn-search-file{
+    position:absolute;
+    border: 1px solid #d6d6d6;
+    height: 30px;
+    top:25px;
+    right: 30px;
+    border-radius: 5px;
+}
+
+.btn-search-file:hover{
+    background-color: #e8e8e8;
+}
+
+.img-blob-search{
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.text-blob-search{
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.text-blob-separator{
+    color: #b1b1b1;
+}
+
+
+.div-line-number{
+    min-height: 480px;
+    float: left;
+    width: 5%;
+    background-color: #f7f8fa;
+    padding-right: 10px;
+    border-right: 1px solid #fbfbfb;
+}
+
+.text-line-number{
+    display: block;
+    text-align: right;
+    color: #7f8fa4;
+    line-height: 20px;
+    font-size: 15px;
+    height: 20px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.input-area-code{
+
+    overflow: auto;
+    float: left;
+    min-width: 95%;
+    line-height: 20px;
+    font-size: 15px;
+    padding: 0 0 0 10px;
+    border: 0;
+    margin: 0;
+    outline: none;
+    resize:none;
+}
+
+.div-blob-delete-title{
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.input-area-code-commit{
+    width: 400px;
+    height: 150px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.text-file-name{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.text-file-size{
+    font-size: 12px;
+}
+
+.loading-ref-blob{
+    margin-right:20px;
+}
+
+.select-ref-blob{
+    width:200px;
+}

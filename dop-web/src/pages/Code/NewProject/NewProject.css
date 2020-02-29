@@ -1,0 +1,81 @@
+.loading-new-project{
+    width: 100%;
+}
+.new-project-container{
+    background-color: rgb(255, 255, 255);
+}
+
+.div-new-project-top{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 60px;
+    height: 60px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 15px;
+}
+
+.div-new-project-input{
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.div-new-project-visibility{
+    width: 85%;
+}
+
+.label-new-project-left{
+    width: 15%;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.input-new-project-name{
+    width: 85%;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #e2e2e2;
+
+}
+
+.input-new-project-description{
+    width: 85%;
+    height: 80px;
+    border-radius: 2px;
+    border: 1px solid #e2e2e2;
+}
+
+.div-new-project-submit{
+    height: 80px;
+    background-color: #fbfbfb;
+    border-top: 1px solid #e8e8e8;
+}
+
+.btn-new-project-create{
+    margin-top: 20px;
+    float: left;
+    background-color: #31af64;
+    border-color: #2faa60;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.btn-new-project-cancel{
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+    background-color: rgb(255, 255, 255);
+    border-color: #e2e2e2;
+    color: black;
+    width: 60px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 15px;
+    font-size: 13px;
+}

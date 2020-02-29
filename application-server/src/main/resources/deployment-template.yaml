@@ -1,0 +1,43 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: <NAME>
+    version: <VERSION>
+  name: <NAME>
+  namespace: <NAMESPACE>
+spec:
+  replicas: <REPLICAS>
+  selector:
+    matchLabels:
+      app: <NAME>
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: <NAME>
+        version: <VERSION>
+    spec:
+      containers:
+        - image: <IMAGE_URL>
+          imagePullPolicy: Always
+          name: <NAME>
+          ports:
+            - containerPort: <CONTAINER_PORT>
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /etc/timezone
+              name: host-timezone
+      dnsPolicy: ClusterFirst
+      volumes:
+        - hostPath:
+            type: ''
+            path: /etc/localtime
+          name: host-time
+        - hostPath:
+            type: ''
+            path: /etc/timezone
+          name: host-timezone

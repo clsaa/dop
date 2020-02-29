@@ -1,0 +1,79 @@
+@mixin card($width,$height,$margin) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+
+  .sub-title {
+    float: right;
+    text-align: right;
+
+    .edit-button {
+      &.hide {
+        display: none
+      }
+    }
+
+    .save-button {
+      margin-right: 5px;
+
+      &.hide {
+        display: none
+      }
+    }
+
+    .cancel-button {
+      &.hide {
+        display: none
+      }
+    }
+  }
+  .card-form {
+    background: #FFF;
+
+    .form-item-text {
+      float: left;
+      margin: 7px
+    }
+  }
+
+}
+
+.form-item-input {
+  width: 100%;
+}
+
+
+.card-container {
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .user-card {
+    width: 38%;
+    margin: 1%;
+
+    .avatar {
+      max-width: none;
+      height: 80px;
+      opacity: 1;
+      width: 80px;
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  .basic-card {
+    @include card(58%, 100%, 1%);
+
+  }
+
+  .url-card {
+    @include card(98%, 100%, 1%);
+
+  }
+}
+
+

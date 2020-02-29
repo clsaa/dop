@@ -1,0 +1,166 @@
+.file-container{
+    background-color: rgb(255, 255, 255);
+    min-height: 600px;
+    position: relative;
+}
+
+.div-tree-top{
+    display: flex;
+    align-items:center ;
+    height: 80px;
+    padding-left: 20px;
+    position: relative;
+    background-color: #fbfbfb;
+
+}
+
+.btn-search-file{
+    position:absolute;
+    border: 1px solid #d6d6d6;
+    height: 30px;
+    top:25px;
+    right: 30px;
+    border-radius: 5px;
+}
+
+.btn-search-file:hover{
+    background-color: #e8e8e8;
+}
+
+.img-tree-search{
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.text-tree-search{
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.div-tree-title{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    border-top: 1px solid #dce0e6;
+    border-bottom: 1px solid #dce0e6;
+    background-color: #f7f8fa;
+}
+
+.div-tree-item{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    border-bottom: 1px solid #dce0e6;
+}
+
+.div-tree-item:hover{
+    background-color: #edfdff;
+}
+
+.div-tree-content{
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid #d6d6d6;
+}
+
+
+.text-tree-title{
+    /*font-weight: bold;*/
+}
+
+.text-tree-name-title{
+    display: inline-block;
+    width: 38%;
+    font-size: 15px;
+    /*font-weight: bold;*/
+}
+
+.text-tree-commit-title{
+    display: inline-block;
+    width: 50%;
+    font-size: 15px;
+    /*font-weight: bold;*/
+}
+
+.text-tree-update-title{
+    display: inline-block;
+    width: 10%;
+    font-size: 15px;
+    text-align: right;
+    /*font-weight: bold;*/
+}
+
+.text-tree-name{
+    display: inline-block;
+    width: 38%;
+    font-size: 15px;
+}
+
+.text-tree-commit{
+    display: inline-block;
+    width: 45%;
+    font-size: 15px;
+    color: #848484;
+}
+
+.text-tree-update{
+    display: inline-block;
+    width: 15%;
+    text-align: right;
+    font-size: 15px;
+    color: #585858;
+}
+
+.loading-tree-update{
+    width: 3%;
+}
+
+.text-tree-update-loading{
+    display: inline-block;
+    width: 12%;
+    font-size: 15px;
+    color: #585858;
+}
+
+
+
+.img-tree-folder{
+    width: 15px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.img-tree-file{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+
+.text-tree-separator{
+    color: #b1b1b1;
+}
+
+
+a:hover{
+    cursor:pointer;
+    color: black;
+}
+
+.loading-ref-tree{
+    margin-right:20px;
+}
+
+.select-ref-tree{
+    width:200px
+}
+
+
+

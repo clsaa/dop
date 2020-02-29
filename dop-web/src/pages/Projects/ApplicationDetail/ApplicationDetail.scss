@@ -1,0 +1,21 @@
+.Tab {
+  position: fixed;
+  top: 120px;
+  left: 240px;
+  right: 0;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90%;
+  overflow: scroll;
+  padding: 0 20px;
+  z-index: 97;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 0 4px;
+}
+
+.TabPane {
+  text-align: center
+}
+

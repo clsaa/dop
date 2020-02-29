@@ -1,0 +1,271 @@
+.button {
+  margin-left: 10px
+}
+
+.step{
+  display: flex;
+  justify-content: center;
+  .stepItem {
+    min-width: 50px;
+    max-width: 100px;
+    .next-icon-success-filling{
+      color:#8cc04f;
+    }
+    .next-icon-delete-filling{
+      color:#d54c53
+    }
+  }
+}
+
+
+.wrapper {
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+}
+
+.iframe {
+  position: relative;
+  top: -130px;
+  width: 102%;
+  height: 100%;
+}
+
+.pipeline-log-accordion {
+  font-family: "LatoLatinWeb", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: auto;
+  .pipeline-log-title {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+    border: solid 1px #e4e4e4;
+    background: white;
+    font-size: 15px;
+    align-items: center;
+    &:hover {
+      background: #FAFAFA;
+    }
+    .success {
+      background: #8cc04f;
+    }
+    .fail {
+      background: #d54c53;
+    }
+    .loading {
+      background: #2077FF;
+    }
+    .div-icon {
+      width: 30px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon {
+        color: white;
+      }
+    }
+    .div-icon2 {
+      width: 30px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon {
+        transition: all .5s;
+        font-size: 2px;
+      }
+    }
+    .process {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .prop {
+      color: #a4a4a4;
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+  }
+  .content {
+    background-color: #333333;
+    color: #f5f5f5;
+    padding: 0.5rem;
+    .pre {
+      clear: left;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      counter-reset: line-numbering;
+      margin: 0;
+      box-sizing: border-box;
+      font-size: 13px;
+      .ol {
+        list-style-type: decimal;
+        .li {
+          list-style: none;
+          font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+          .li-wrap{
+            display: flex;
+            &:hover{
+              background-color: rgba(255,255,255, 0.2);
+            }
+            .idx{
+              color: #777777;
+              display:inline-block;
+              margin-left: 60px;
+              text-align: left;
+            }
+            .shell{
+              color: #f5f5f5;
+              display:inline;
+              margin-left: 40px;
+              white-space: pre-wrap;
+              width: 700px;
+              word-wrap:break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pipeline-info-stage-step{
+  .pipeline-info-stage{
+    margin-left: 80px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    .pipeline-info-stage-stepItem{
+      max-width: 100px;
+      .closeStage{
+        margin-right: 5px;
+        color: #d54c53;
+        cursor: pointer;
+      }
+      .addStage{
+        margin-left: 5px;
+        color: #1DC11D;
+        cursor: pointer;
+        transform: rotate(45deg);
+        display: inline-block;
+      }
+    }
+  }
+  .pipeline-info-step{
+    margin-left: 80px;
+    padding-top: 10px;
+    border-top:#666666 1px dashed;
+    .header{
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .label{
+      width: 90px;
+      margin-bottom:30px;
+      margin-right: 10px;
+      display: inline-block;
+      text-align: right;
+    }
+    .task{
+      display: flex;
+      .task-label-set{
+        display: inline-block;
+        width: 90px;
+        height: 20px;
+        margin-top: 5px;
+        margin-right: 10px;
+        text-align: right;
+        p{
+          font-size: 10px;
+          color: red;
+        }
+      }
+      .choose-task{
+        margin-right: 40px;
+        .chosen-task{
+          display: flex;
+          align-items: center;
+
+          .task-label{
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            margin-top: 10px;
+            background-color: white;
+            color: black;
+            border: solid 1px #C4C6CF;
+            line-height: 20px;
+            cursor: pointer;
+            position: relative;
+            &:hover{
+              border-color: black;
+            }
+            &.chosen{
+              border-color: black;
+            }
+            .close{
+              display: inline-block;
+              position: absolute;
+              right: 6px;
+            }
+          }
+        }
+      }
+      .chosen-task-detail{
+        background-color: #ececec;
+        width: 500px;
+        height: 400px;
+        padding-left: 30px;
+        border: 1px solid #C4C6CF;
+        &.hide{
+          display: none;
+        }
+        .next-loading{
+          .next-loading-component{
+            .chosen-task-detail-title{
+              font-size: 15px;
+            }
+          }
+        }
+        .chosen-task-detail-title{
+          font-size: 15px;
+        }
+        .chosen-task-detail-body{
+          margin: 10px 0;
+          .item{
+            display: inline-block;
+            width: 90px;
+            text-align: left;
+            margin-right: 10px;
+            .must{
+              color: red;
+            }
+          }
+          .input{
+            width: 250px;
+            margin-left: 40px;
+          }
+          .textarea{
+            overflow: hidden;
+            .title{
+              float: left;
+              .must{
+                color: red;
+              }
+            }
+            .area-wrap{
+              margin-left: 140px;
+              .area{
+                width: 250px;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+.jenkinsfile-wrapper{
+
+}

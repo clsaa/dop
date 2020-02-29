@@ -1,0 +1,175 @@
+.form-loading-container {
+  width: 100%;
+
+  .form {
+    width: 100%;
+    text-align: center;
+
+    .form-loading {
+
+      width: 50%;
+      text-align: center;
+
+
+      .edit-k8s-icon {
+        float: right;
+
+        &.hide {
+          display: none;
+        }
+      }
+
+      .form-item-use-ingress {
+        .ingress-input {
+          width: 60%
+        }
+
+        .node-port-input {
+          width: 60%
+        }
+
+        &.hide {
+          display: none;
+        }
+      }
+
+      .form-item-release-batch {
+        &.hide {
+          display: none;
+        }
+      }
+
+      .form-item-Number-picker {
+        &.hide {
+          display: none;
+        }
+      }
+
+      .form-item-select {
+        width: 60%;
+
+        &.hide {
+          display: none;
+        }
+      }
+
+      .form-item-yaml-origin {
+        &.hide {
+          display: none;
+        }
+      }
+
+
+      .form-item-deployment-detail {
+        &.hide {
+          display: none;
+        }
+      }
+
+      .form-item-create-service {
+        .port-input {
+          width: 60%
+        }
+
+
+        &.hide {
+          display: none;
+        }
+      }
+
+
+      .form-item-yaml-path-input {
+        &.hide {
+          display: none;
+        }
+      }
+
+      .form-item-switch {
+        &.hide {
+          display: none;
+        }
+      }
+
+      .form-item-combobox {
+        width: 60%;
+        &.hide {
+          display: none;
+        }
+      }
+
+      .form-item-text {
+
+        text-align: left;
+        margin-left: 10%;
+        margin-top: 5px;
+
+        &.hide {
+          display: none;
+        }
+      }
+
+      .save-button {
+        margin-right: 5px;
+
+        &.hide {
+          display: none;
+        }
+      }
+
+
+      .cancel-button {
+        margin-right: 5px;
+
+        &.hide {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  .yaml-editor-form {
+    width: 100%;
+
+    .yaml-editor-form-item {
+      width: 100%;
+
+      .yaml-input {
+        width: 90%;
+        float: left;
+      }
+
+      .edit-yaml-icon {
+        float: right;
+
+        &.hide {
+          display: none;
+        }
+      }
+    }
+
+    .save-yaml-button {
+      margin-right: 5px;
+
+      &.hide {
+        display: none;
+      }
+
+    }
+
+    .cancel-yaml-button {
+      &.hide {
+        display: none;
+      }
+    }
+  }
+
+
+  //.form-loading{
+  //  width:200%
+  //}
+
+
+}
+
+

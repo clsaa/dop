@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: discovery-server  #服务名
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+server:
+  port: 8761                 # 指定该Eureka实例的端口
+eureka:
+  instance:
+    appname: ${spring.application.name}  #服务名
+    lease-expiration-duration-in-seconds: 10  #没有心跳时的淘汰时间
+    lease-renewal-interval-in-seconds: 5    #心跳间隔
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000 #主动失效检测
+    ## 心跳阈值计算周期，如果开启自我保护模式，可以改一下这个配置
+    ## eureka.server.renewalThresholdUpdateIntervalMs=120000
+    use-read-only-response-cache: false #禁用read-only-response-cache
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://discovery.dop.clsaa.com/eureka
