@@ -13,7 +13,7 @@ spring:
     url: jdbc:mysql://115.28.186.77:30306/db_dop_application?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
     username: dop
     password: Dop_mysql_12345
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     max-active: 10
     max-idle: 5
     min-idle: 5

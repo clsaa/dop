@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @CrossOrigin
 public class UserCredentialController {
-    @Autowired
     private UserCredentialService userCredentialService;
 
     @ApiOperation(value = "添加用户凭证", notes = "添加一个用户凭证，比如GitlabToken，JenkinsToken，Harbor用户名密码等")

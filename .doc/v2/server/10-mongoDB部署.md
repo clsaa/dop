@@ -128,3 +128,7 @@ spec:
 ```
 kubectl apply -f mongo.yml
 ```
+
+rs.initiate( {  _id : "replSet",  members: [ { _id : 0, host : "121.42.13.103:31041" }, { _id : 1, host : "115.28.186.77:31041" }]})
+
+https://wiki.shileizcc.com/confluence/pages/viewpage.action?pageId=27000909
